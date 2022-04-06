@@ -1,0 +1,53 @@
+<!--https://github.com/tkrisztian95/netflix-imdb-chrome-extension-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tokmate tiktok downloader</title>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="TokMate - TikTok downloader"
+        />
+        <meta name="author" content="H9Tech" />
+        <!-- Style Sheets -->
+        <link href="../css/popup.css" rel="stylesheet" media="screen" />
+    </head>
+
+    <body>
+        <div class="form-style-2">
+            <div class="form-style-2-heading">
+                <a>TokMate TikTok Downloader</a>
+            </div>
+            <label
+                ><span>1. Get API key:</span
+                ><a id="apikeyLink" href="http://t.me/tokmatebot?start=getToken"
+                    >Click here</a
+                ></label
+            >
+            <form>
+                <label for="apikey">
+                    <span>2. Paste here:<span class="required">*</span></span>
+                    <input
+                        id="apikey"
+                        class="input-field"
+                        type="text"
+                        name="apiKey"
+                        value=""
+                    />
+                </label>
+                <label
+                    ><span id="display_message" style="display: none"
+                        >Key saved!</span
+                    ></label
+                >
+                <label
+                    ><span></span
+                    ><input type="button" value="Save" id="btnSetApiKey"
+                /></label>
+            </form>
+            <!-- Scripts -->
+            <script type="text/javascript" src="../js/popup.js"></script>
+        </div>
+    </body>
+</html>

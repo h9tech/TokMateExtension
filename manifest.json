@@ -5,13 +5,13 @@
   "version": "0.0.1",
   "description": "Get TikTok videos without watermark directly on your Telegram.",
   "icons": {
-    "16": "src/icons/icon16.png",
-    "48": "src/icons/icon48.png",
-    "128": "src/icons/icon128.png"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "content_scripts": [
     {
-      "js": ["js/tokmate.js"],
+      "js": ["js/popup.js", "js/tokmate.js"],
       "matches": ["https://www.tiktok.com/*"]
     }
   ],

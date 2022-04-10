@@ -1,4 +1,4 @@
-function tokmateBot(url){
+function tokmateBot(url, apiKey){
     fetch("https://hemantapokharel.com.np/tokmateApi/", {
         method: 'POST',
         body: JSON.stringify({
@@ -11,11 +11,14 @@ function tokmateBot(url){
     })
 };
 
-
 document.addEventListener('copy', (e) => {
     const videoUrl = e.target.value
 
    if( confirm('Do you want to download this video?')){
-       tokmateBot(videoUrl)
+    chrome.storage.sync.get('apikey', (result) => {
+        let apiKey = result['apikey'] || '';
+        tokmateBot(videoUrl, apiKey)
+    });
    }
 })
+

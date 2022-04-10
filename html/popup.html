@@ -1,53 +1,62 @@
-<!--https://github.com/tkrisztian95/netflix-imdb-chrome-extension-->
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Tokmate tiktok downloader</title>
-        <meta charset="UTF-8" />
-        <meta
-            name="description"
-            content="TokMate - TikTok downloader"
-        />
-        <meta name="author" content="H9Tech" />
-        <!-- Style Sheets -->
-        <link href="../css/popup.css" rel="stylesheet" media="screen" />
-    </head>
+<html lang="en">
 
-    <body>
-        <div class="form-style-2">
-            <div class="form-style-2-heading">
-                <a>TokMate TikTok Downloader</a>
-            </div>
-            <label
-                ><span>1. Get API key:</span
-                ><a id="apikeyLink" href="http://t.me/tokmatebot?start=getToken"
-                    >Click here</a
-                ></label
-            >
-            <form>
-                <label for="apikey">
-                    <span>2. Paste here:<span class="required">*</span></span>
-                    <input
-                        id="apikey"
-                        class="input-field"
-                        type="text"
-                        name="apiKey"
-                        value=""
-                    />
-                </label>
-                <label
-                    ><span id="display_message" style="display: none"
-                        >Key saved!</span
-                    ></label
-                >
-                <label
-                    ><span></span
-                    ><input type="button" value="Save" id="btnSetApiKey"
-                /></label>
-            </form>
-            <!-- Scripts -->
-            <script type="text/javascript" src="../js/popup.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <div>
+            <img height="50" width="150" src="\images\header.png" id="tikImage">
         </div>
-    </body>
+
+        <div>
+            <div style="display: flex; align-items: center">
+                <input type="checkbox" id="downloadToggler">
+                <label for="downloadToggler">Download</label>
+            </div>
+
+            <div id="download-area">
+                <div>
+                    <label for="download_location">Download Location:</label>
+                    <input type="text" id="download_location">
+                </div>
+
+                <button>Change</button>
+            </div>
+
+
+            <div style="display: flex; align-items: center">
+                <input type="checkbox" id="telegramToggler">
+                <label for="telegramToggler">Connect Telegram</label>
+            </div>
+
+            <div id="telegram-area">
+                <lable for="telegram">1. Get the API Key Here:</label>
+                    <a href="http://t.me/tokmatebot?start=getToken" target="_blank">
+                        <button>
+                            GET THE KEY
+                        </button>
+                    </a>
+
+                    <p>(or send /token to the telegram bot.)</p>
+
+                    <div>
+                        <label for="apikey">2. Paste the token here:</label>
+                        <input type="text" id="apikey">
+                    </div>
+
+                    <button id="btnSetApiKey">Save</button>
+                    <br>
+                    <p style="display: none;" id="display_message">Api key updated</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script type="text/javascript" src="/js/storage.js"></script>
+</body>
+
 </html>

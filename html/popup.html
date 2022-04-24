@@ -5,56 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 
-<body>
-    <div>
-        <div>
-            <img height="50" width="150" src="\images\header.png" id="tikImage">
+<body class="utsav border border-dark">
+    <div class="paint" style="width: 300px; padding: 0 20px;">
+        <div class="text-center">
+            <img height="50" width="150" src="\images\header.png" alt="Logo">
         </div>
 
-        <div>
-            <div style="display: flex; align-items: center">
-                <input type="checkbox" id="downloadToggler">
-                <label for="downloadToggler">Download</label>
+        <div class="border border-dark mt-3 p-2" style="border-radius: 5px;">
+            <div class="form-check label-n-checkbox">
+                <input class="form-check-input" type="checkbox" id="downloadToggler">
+                <label class="form-check-label" for="downloadToggler"> Download </label>
             </div>
 
             <div id="download-area">
                 <div>
-                    <label for="download_location">Download Location:</label>
-                    <input type="text" id="download_location">
+                    <label class="p-1 badge badge-danger" for="download-location">Download
+                        Location:</label>
+                    <input class="p-1 form-control" type="text" placeholder="Location" id="download-location"
+                        aria-label="Search">
                 </div>
-
-                <button>Change</button>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-dark">Change</button>
+                </div>
             </div>
+        </div>
 
 
-            <div style="display: flex; align-items: center">
-                <input type="checkbox" id="telegramToggler">
-                <label for="telegramToggler">Connect Telegram</label>
+        <div class="border border-dark p-2 mt-3" style="border-radius: 5px;">
+            <div class="form-check label-n-checkbox">
+                <input class="form-check-input" type="checkbox" id="telegramToggler">
+                <label class="form-check-label" for="telegramToggler">Connect Telegram</label>
             </div>
 
             <div id="telegram-area">
-                <lable for="telegram">1. Get the API Key Here:</label>
-                    <a href="http://t.me/tokmatebot?start=getToken" target="_blank">
-                        <button>
-                            GET THE KEY
-                        </button>
-                    </a>
+                <label for="telegram">1. Get the API Key Here:</label>
 
-                    <p>(or send /token to the telegram bot.)</p>
+                <div class="text-center my-1">
+                    <a href="https://t.me/tokmatebot?start=getToken" target="_blank" class="btn btn-dark">Get The
+                        Key</a>
+                </div>
 
-                    <div>
-                        <label for="apikey">2. Paste the token here:</label>
-                        <input type="text" id="apikey">
-                    </div>
+                <p>(or send /token to the telegram bot.)</p>
 
-                    <button id="btnSetApiKey">Save</button>
-                    <br>
-                    <p style="display: none;" id="display_message">Api key updated</p>
+                <div>
+                    <label for="apikey">2. Paste the token here:</label>
+                    <input id="apikey" class="form-control p-1" type="text">
+
+                    <button type="button" class="mt-2 btn btn-dark" id="btnSetApiKey">Save</button>
+                </div>
+
+                <small class="mt-1 text-success" style="display: none;" id="display_message">Api key updated</small>
             </div>
         </div>
+
+        <footer class="mt-4 pt-2" style="background-color: rgba(0, 0, 0, 0.2); border-radius: 5px;">
+            <div>
+                <div class="social-icons">
+                    <a target="_blank" href="https://fb.com">
+                        <img src="https://img.icons8.com/ios-glyphs/2x/telegram-app.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://fb.com">
+                        <img src="https://img.icons8.com/ios-glyphs/2x/youtube-play.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://fb.com">
+                        <img src="https://img.icons8.com/ios-glyphs/2x/github.png" alt="">
+                    </a>
+                </div>
+                <div class="text-center mt-2">
+                    <span> © 2020 Copyright:</span>
+                    <a target="_blank" href="https://fb.com" class="text-white">Utsav1o1</a>
+                </div>
+            </div>
+        </footer>
     </div>
+
     <script type="text/javascript" src="/js/popup.js"></script>
     <script type="text/javascript" src="/js/storage.js"></script>
 </body>

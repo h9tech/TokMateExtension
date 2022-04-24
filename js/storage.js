@@ -24,13 +24,14 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 });
 
 function saveApiKey() {
+    const displayMessage = document.getElementById('display_message');
     const apiKey = document.getElementById('apikey').value;
     const jsonFile = {};
     jsonFile[LOCAL_STORAGE_API_KEY] = apiKey;
     chrome.storage.sync.set(jsonFile);
-    document.getElementById('display_message').style.display = 'block';
+    displayMessage.style.display = 'block';
     setTimeout(() => {
-      document.getElementById('display_message').style.display = 'none';
+      displayMessage.style.display = 'none';
     }, 5000);
     console.log(`Token updated: ${JSON.stringify(jsonFile)}`);
 }

@@ -1,0 +1,28 @@
+.paint {
+  background-image: linear-gradient(
+    to left bottom,
+    #8e3a89,
+    #a464a8,
+    #bb8cc6,
+    #d3b3e3,
+    #eedbfe
+  );
+
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons img {
+  height: 20px;
+  width: 20px;
+}
+
+.label-n-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
